@@ -10,7 +10,7 @@ class Usuarios extends Controller
 
     public function index()
     {        if (empty($_SESSION['permisosMod']['r'])) {
-        header('Location:' . base_url . '/perfil');
+        header('Location:' . base_url . '/register');
     }
         $data['page_name'] = "Usuarios";
         $data['function_css'] = "usuarios1.css";

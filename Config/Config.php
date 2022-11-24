@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'http://localhost/TECNOAGRO';
+const base_url = 'https://tecnoagro.azurewebsites.net/';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
