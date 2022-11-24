@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2022 a las 17:09:03
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.0.13
+-- Tiempo de generación: 24-11-2022 a las 21:37:18
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `gsfdb`
+-- Base de datos: `tecnoagro`
 --
 
 -- --------------------------------------------------------
@@ -37,7 +37,7 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id_cat`, `nombre_cat`) VALUES
-(1, 'categoria 1'),
+(1, 'Categoria 1'),
 (2, 'Categoria 2');
 
 -- --------------------------------------------------------
@@ -47,20 +47,20 @@ INSERT INTO `categorias` (`id_cat`, `nombre_cat`) VALUES
 --
 
 CREATE TABLE `productos` (
-  `id_pro` int(11) NOT NULL,
-  `id_categoria_pro` int(11) NOT NULL,
-  `nombre_pro` varchar(150) NOT NULL
+  `id_producto` int(11) NOT NULL,
+  `nombre_producto` varchar(150) NOT NULL,
+  `id_categoria_pro` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`id_pro`, `id_categoria_pro`, `nombre_pro`) VALUES
-(1, 1, 'Producto 1'),
-(2, 1, 'Producto 2'),
-(3, 2, 'Producto 3'),
-(4, 2, 'Producto 4');
+INSERT INTO `productos` (`id_producto`, `nombre_producto`, `id_categoria_pro`) VALUES
+(1, 'Producto 1', 1),
+(2, 'Producto 2', 1),
+(3, 'Producto 3', 2),
+(4, 'Producto 4', 2);
 
 -- --------------------------------------------------------
 
@@ -69,21 +69,22 @@ INSERT INTO `productos` (`id_pro`, `id_categoria_pro`, `nombre_pro`) VALUES
 --
 
 CREATE TABLE `roles` (
-  `id_rol` int(11) NOT NULL,
-  `nombre_rol` varchar(100) NOT NULL,
-  `estado_rol` int(11) NOT NULL DEFAULT 1
+  `id` int(11) NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  `activo` int(11) NOT NULL DEFAULT 1,
+  `creado` datetime NOT NULL,
+  `actualizado` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `roles`
 --
 
-INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
-(1, 'Administrador', 1),
-(2, 'Editor', 1),
-(3, 'Website UPDATE', 1),
-(4, 'Website', 1),
-(5, 'Website', 1);
+INSERT INTO `roles` (`id`, `nombre`, `activo`, `creado`, `actualizado`) VALUES
+(1, 'ROOT', 1, '2022-11-24 16:16:33', '2022-11-24 12:16:56'),
+(2, 'ADMIN', 1, '2022-11-24 16:16:33', '2022-11-24 12:16:56'),
+(3, 'EDITOR', 1, '2022-11-24 16:16:33', '2022-11-24 12:16:56'),
+(4, 'DEFAULT', 1, '2022-11-24 16:16:33', '2022-11-24 12:16:56');
 
 -- --------------------------------------------------------
 
@@ -92,13 +93,24 @@ INSERT INTO `roles` (`id_rol`, `nombre_rol`, `estado_rol`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `id_usuario` int(11) NOT NULL,
+  `id_usuarios` int(11) NOT NULL,
   `id_rol` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
   `password` varchar(255) NOT NULL,
   `is_activo` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuarios`, `id_rol`, `nombre`, `email`, `password`, `is_activo`) VALUES
+(1, 1, 'ORESTES', 'Admin@admin.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 1),
+(2, 4, 'visitante', 'visitante@visitante.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 1),
+(3, 2, 'SLENDER', 'root@root.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 1),
+(4, 3, 'moica', 'moica@moica.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 1),
+(5, 4, 'rubenia', 'rubenia@rubenia.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 1);
 
 --
 -- Índices para tablas volcadas
@@ -114,21 +126,21 @@ ALTER TABLE `categorias`
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id_pro`),
-  ADD KEY `rel_categoria_producto` (`id_categoria_pro`);
+  ADD PRIMARY KEY (`id_producto`),
+  ADD KEY `rel_cateogoria_producto` (`id_categoria_pro`);
 
 --
 -- Indices de la tabla `roles`
 --
 ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id_rol`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id_usuario`),
-  ADD KEY `rol_usuarios` (`id_rol`);
+  ADD PRIMARY KEY (`id_usuarios`),
+  ADD KEY `usuarios_roles` (`id_rol`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -144,19 +156,19 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
@@ -167,6 +179,12 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_categoria_pro`) REFERENCES `categorias` (`id_cat`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `roles` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
