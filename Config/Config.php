@@ -20,7 +20,7 @@ const USERTYPE = 7;
 /* ----------------------------------------------------- */
 
 const DB_HOST = "http://dbtecnoagro.mysql.database.azure.com/";
-const DB_NAME = "dbtecnoagro";
+const DB_NAME = "dbtec";
 const DB_USER = "Slender";
 const DB_PASSWORD = "Tecno89!!";
 const DB_CHARSET = "utf8";
