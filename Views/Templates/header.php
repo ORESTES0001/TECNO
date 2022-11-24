@@ -3,8 +3,7 @@
 
 <head>
     <title><?php echo $data['page_name']; ?></title>
-
-
+    <link href="<?= CSS ?>/nprogress.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,8 @@
     
     <link rel="stylesheet" href="<?php echo CSS ."/".  $data['function_css']; ?>">
     <link rel="stylesheet" href="<?php echo CSS ?>/nav1.css">
-    <link rel="stylesheet" href="<?php echo PLUGINS ?>/noty/noty.css">
+       <link href="<?= PLUGINS ?>/noty/noty.css" rel="stylesheet">
+
     <title> <?php print_r($data['page_name'])  ?> </title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

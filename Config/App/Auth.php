@@ -1,6 +1,13 @@
 <?php
 class Auth
 {
+
+  public static function sessionUser(int $iduser)
+  {
+    $respuesta = DB::SQL("SELECT * FROM usuarios u INNER JOIN roles r ON u.id_rol = r.id WHERE u.id_usuarios = {$iduser}");
+    $_SESSION['userData'] = $respuesta[0];
+    return $respuesta[0];
+  }
   /**
    *
    * @void sessiones

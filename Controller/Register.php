@@ -71,7 +71,7 @@ class Register extends Controller
           $_SESSION['nombre'] = $usuario['nombre'];
           $_SESSION['email'] = $usuario['email'];
           $_SESSION['login'] = true;
-
+          Auth::sessionUser($_SESSION['iduser']);
           $arrJson = ['msg' => 'El usuario se ha logeado'];
         }
       } else {

@@ -7,7 +7,6 @@
 
 
     <ul class="navv2" id="accordionSidebar">
-
         <li class="nav-item">
             <button id="Menu">Menu</button>
             <button id="Menu1">Menu</button>

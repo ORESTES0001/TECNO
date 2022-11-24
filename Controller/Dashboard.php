@@ -4,6 +4,7 @@ class Dashboard extends Controller
     public function __construct()
     {
         Auth::noAuth();
+        Permisos::getPermisos(DASHBOARD);
         parent::__construct();
     }
 

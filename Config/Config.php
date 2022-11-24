@@ -3,6 +3,17 @@
 const base_url = 'http://localhost/TECNOAGRO';
 
 define('SITE_LANG', 'es');
+/* ----------------------------------------------------- */
+/*             CONSTANTES PAGINAS DE NAVEGACION          */
+/* ----------------------------------------------------- */
+
+const DASHBOARD = 1;
+const PERFIL = 2;
+const USUARIOS = 3;
+const ROLES = 4;
+const TABLAS = 5;
+const CICLOESTRAL = 6;
+const USERTYPE = 7;
 
 /* ----------------------------------------------------- */
 /*             CONSTANTES PARA CONEXION DB                  */
