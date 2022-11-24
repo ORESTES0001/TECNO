@@ -19,10 +19,10 @@ const USERTYPE = 7;
 /*             CONSTANTES PARA CONEXION DB                  */
 /* ----------------------------------------------------- */
 
-const DB_HOST = "localhost";
-const DB_NAME = "tecnoagro";
-const DB_USER = "root";
-const DB_PASSWORD = "";
+const DB_HOST = "http://dbtecnoagro.mysql.database.azure.com/";
+const DB_NAME = "dbtecnoagro";
+const DB_USER = "Slender";
+const DB_PASSWORD = "Tecno89!!";
 const DB_CHARSET = "utf8";
 
 /* ----------------------------------------------------- */
