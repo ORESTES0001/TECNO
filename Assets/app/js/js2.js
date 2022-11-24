@@ -11,7 +11,7 @@ $(document).ready(function(){
         document. getElementById('ir').style.opacity ='1';
         document. getElementById('in').style.zIndex ='10';
         document. getElementById('ir').style.zIndex ='100';
-        document.getElementById("imgss").src="http://localhost/tecnoagro/Assets/img/registro.png";
+        document.getElementById("imgss").src="https://tecnoagro.azurewebsites.net/Assets/img/registro.png";
         })
 })
 $(document).ready(function(){
@@ -27,6 +27,6 @@ $(document).ready(function(){
         document. getElementById('ir').style.opacity ='0';
         document. getElementById('in').style.zIndex ='100';
         document. getElementById('ir').style.zIndex ='10';
-        document.getElementById("imgss").src="http://localhost/tecnoagro/Assets/img/inicio.png";
+        document.getElementById("imgss").src="https://tecnoagro.azurewebsites.net/Assets/img/inicio.png";
         })
 })
