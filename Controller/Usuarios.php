@@ -1,6 +1,7 @@
 <?php
 class Usuarios extends Controller
 {
+
     public function __construct()
     {
         Auth::noAuth();
@@ -9,20 +10,51 @@ class Usuarios extends Controller
     }
 
     public function index()
-    {        if (empty($_SESSION['permisosMod']['r'])) {
-        header('Location:' . base_url . '/register');
-    }
-        $data['page_name'] = "Usuarios";
-        $data['function_css'] = "usuarios1.css";
-        $data['function_js'] = "inicio1.js";
-       $this->views->getView($this, 'index', $data);
-       
-    }
+    {
+        if (empty($_SESSION['permisosMod']['r'])) {
+            header('Location:' . base_url . '/dashboard');
+        }
 
+        $data['page_name'] = "Usuarios";
+        $data['function_css'] = "Usuarios.css";
+        $data['function_js'] = "Usuarios.js";
+        $data['function1_js'] = "inicio1.js";
+        $this->views->getView($this, 'index', $data);
+    }
     public function all()
     {
-        $arrJson = [['id' => 1, 'nombre' => 'Luis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 2, 'nombre' => 'Ruis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 3, 'nombre' => 'Auis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 4, 'nombre' => 'Yuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 5, 'nombre' => 'Wuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 6, 'nombre' => 'Buis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 7, 'nombre' => 'Tuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 8, 'nombre' => 'Auis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 9, 'nombre' => 'Vuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 10, 'nombre' => 'Zuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',],['id' => 11, 'nombre' => 'Xuis Gonzalez', 'correo' => 'admin@admin.com', 'rol' => 'root', 'estado' => 'Activo',]];
+        $arrJson = [];
+        $users = UsuariosModel::all();
+
+        if (empty($users)) {
+            $arrJson = ['msg' => 'No se encontraron registros'];
+        } else {
+
+            for ($i = 0; $i < count($users); $i++) {
+                if ($users[$i]['is_activo'] == 1) {
+                    $users[$i]['is_activo'] = '<span class="badge badge-success">Activo</span>';
+                } else {
+                    $users[$i]['is_activo'] = '<span class="badge badge-danger">Inactivo</span>';
+                }
+            }
+
+            $arrJson = $users;
+        }
 
         echo json_encode($arrJson, JSON_UNESCAPED_UNICODE);
+    }
+
+    public function nuevo()
+    {
+        $data['page_name'] = "Nuevo Usuario";
+        $data['function_js'] = "Usuarios.js";
+        $this->views->getView($this, 'nuevo', $data);
+    }
+
+    public function editar()
+    {
+        $data['page_name'] = "Editar Usuario";
+        $data['function_js'] = "Usuarios.js";
+        $this->views->getView($this, 'editar', $data);
     }
 }

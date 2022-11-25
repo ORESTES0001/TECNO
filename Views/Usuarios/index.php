@@ -59,8 +59,9 @@ headerAdmin($data);
 
 <!-- tabla -->
 
-<div class="x_content">
-            <table id="tblUsuarios" class="display responsive nowrap" >
+        <div class="x_panel">
+          <div class="x_content">
+            <table id="tblUsuarios" class="display responsive nowrap" style="width:100%">
               <thead>
                 <tr>
                   <th>ID</th>
@@ -68,6 +69,7 @@ headerAdmin($data);
                   <th>Correo</th>
                   <th>Rol</th>
                   <th>Status</th>
+                  <th>Acciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,7 +78,7 @@ headerAdmin($data);
             </table>
 
           </div>
-
+        </div>
 
 
 <?php footerAdmin($data); ?>

@@ -1,0 +1,456 @@
+body{
+    width: 100%;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+/*<navegador>*/
+.nav{
+    position:fixed;
+    display: flex;
+    background-color: #707070;
+    opacity: 0.7;
+    top: 20px;
+    border-radius: 7px;
+    left: 930px;
+    height: 30px;
+    width: 300px;
+    box-sizing: content-box;
+
+}
+
+nav li{
+    position: relative;
+    top: -10px;
+    left: -15px;
+    display:inline-flex;
+    padding: 0px;
+    margin: 0px 10px;
+}
+
+nav li a{
+    color: rgb(19, 18, 18);
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+}
+nav li #Menu{
+    position: relative;
+    height: 25px;
+    color: white;
+    top: -5px;
+    left: 80px;
+    background-color: transparent;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 10000;
+    border: none;
+}
+nav li #perfil{
+    position: relative;
+    top: -73px;
+    left: 150px;
+    height: 20px;
+    background-color: transparent;
+    z-index: 100;
+    border: none;
+}
+nav li #buscador{
+    position: relative;
+    top: -183px;
+    left: 260px;
+    height: 20px;
+    background-color: transparent;
+    z-index: 10;
+    border: none;
+}
+nav li #buscador1{
+    position: relative;
+    top: -183px;
+    left: 224px;
+    height: 20px;
+    background-color: transparent;
+    z-index: 1;
+    border: none;
+}
+nav li #search input{
+    position: relative;
+    top: -180px;
+    left: 130px;
+    height: 20px;
+    width: 50px;
+    background-color: white;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 7px;
+    border: none;
+}
+nav li #perfil1{
+    position: relative;
+    top: -73px;
+    left: -10.5px;
+    height: 20px;
+    opacity: 0;
+    background-color: transparent;
+    z-index: 1;
+    border: none;
+}
+nav li #Menu1{
+    position: relative;
+    color: white;
+    font-family: 'Sen', sans-serif;
+    font-weight: 700;
+    z-index: 1;
+    height: 25px;
+    opacity: 0;
+    top: -5px;
+    font-size: 16px;
+    left: 27px;
+    background-color: transparent;
+    border: none;
+}
+nav li #herras{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: -50px;
+    height: 70px;
+    width: 125px;
+    opacity: 0;
+    background-color: rgb(202, 202, 202);
+    transition: 0.5s;
+}
+nav li #perfill{
+    display: block;
+    position: relative;
+    top: -20px;
+    left: 100px;
+    height: 110px;
+    width: 125px;
+    opacity: 0;
+    background-color: rgb(202, 202, 202);
+    transition: 0.5s;
+}
+
+
+.img-profile {
+    width: 30px;
+    height: 30px;
+    
+}
+.navbar-nav{
+    position: absolute;
+    left: 56%;
+}
+
+.navbar {
+    z-index: 10000000000;
+    width: 300px;
+    top: 40px;
+    height: 50px;
+    position: fixed;
+    left: 740px;
+    border-radius: 10px;
+    background-color: rgb(58, 59, 59);
+    opacity: 0.8;
+}
+.navv2{
+    position: absolute;
+    font-size: 1.2em;
+    left: -4%;
+    top: 8px;
+    list-style-type: none
+}
+.navv1{
+    position: absolute;
+    font-size: 1.2em;
+    left: 14%;
+    top: 18px;
+    list-style-type: none
+}
+
+.dropdown-menu {
+    position: relative;
+    left: -160%;
+    background-color: aliceblue;
+    opacity: 0.8;
+}
+
+.herra {
+    position: relative;
+    text-decoration: none;
+    color: #004214;
+    font-family: Big John, Arial;
+    font-size: 11px;
+    
+   
+}
+.herraa {
+    position: relative;
+    text-decoration: none;
+    color: #004214;
+    font-family: Big John, Arial;
+    margin: 10px;
+    font-size: 11px;
+    left: 0%;
+}
+.herraa:hover {
+    
+    color:#12CF4C
+}
+.herra:hover {
+    
+    color:#12CF4C
+}
+.namm{
+    position: relative;
+    left: 20px;
+    top: 15px;
+    font-family: 'Sen', sans-serif;
+    font-size: 15px;
+    z-index: 10000000000;
+}
+.nam{
+    position: relative;
+    left: 30px;
+    top: -24px;
+    font-size: 14px;
+    font-family: Big John, Arial;
+}
+.Mens {
+    text-decoration: none;
+    font-family: Big John, Arial;
+    color: #004214;
+    top: 10px;
+    font-size: 11px;
+}
+.Mens:hover {
+    
+    color:#12CF4C
+}
+
+.inicio {
+    text-decoration: none;
+    color: #0ebd1c;
+    font-family: Big John, Arial;
+    font-size: 11px;
+}
+.inicio:hover {
+    
+    color:#47ee50
+}
+
+@media (max-width: 1000px) {
+    
+    .navbar {
+        
+        width: 330px;
+        left: 520px;
+    }
+
+}
+@media (min-width: 1300px) {
+    
+    .navbar {
+        
+        width: 330px;
+        left: 900px;
+    }
+
+}
+@media (min-width: 1600px) {
+    
+    .navbar {
+        
+        width: 400px;
+        left: 1050px;
+    }
+
+}
+@media (min-width: 2000px) {
+    
+    .navbar {
+        
+        width: 400px;
+        left: 1400px;
+    }
+
+}
+@media (min-width: 2400px) {
+    
+    .navbar {
+        
+        width: 400px;
+        left: 1800px;
+    }
+
+}
+/*</navegador>*/
+/*<cabezera>*/
+.headerr{
+width: 100%;
+height: 500px;
+position: relative;
+display: block;
+}
+
+.headerr img{
+    width: 100%;
+    height: 550px;
+    position: relative;
+    display: flex;
+    top: -95px;
+    z-index: 1;
+    }
+    .headerr h1{
+        color: white;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 38px;
+        z-index: 1000;
+        margin: 0px 80px;
+        position: relative;
+        display: flex;
+        top: 40px;
+        font-weight: 700;
+        }
+        /*</cabezera>*/
+        /*<primer contenedor (descargar app)>*/
+    .floattt{
+        height: 500px;
+        width: 70%;
+        z-index: 1000;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 5px 30px 0px rgb(118, 118, 118);
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        top: -380px;
+        left: 15%;
+    }
+    .conteinerfloat h1{
+        color: rgba(138, 138, 138, 0.19);
+        height: 10px;
+        width: 50px;
+        display: block;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 90px;
+        white-space: pre;
+        z-index: 1000;
+        position: relative;
+        display: flex;
+        top: -750px;
+        left: 15%;
+        font-weight: 700;
+    }
+    
+    .conteinerfloat h2{
+        color: rgb(0, 0, 0);
+        height: 100px;
+        width: 400px;
+        display: block;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 30px;
+        z-index: 1000;
+        position: relative;
+        top: -1010px;
+        left: 35%;
+        font-weight: 800;
+        white-space: normal;
+    }
+    
+    .conteinerfloat h3{
+        color: rgb(255, 255, 255);
+        height: 40px;
+        width: 10.7%;
+        background-color:#56BE72;
+        display: block;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 16px;
+        padding: 3px 400px;
+        z-index: 1000;
+        position: relative;
+        top: -1120px;
+        left: 15%;
+        font-weight: 700;
+        white-space: normal;
+        line-height : 40px;
+    }
+    .conteinerfloat input{
+        color: rgb(59, 59, 59);
+        height: 40px;
+        width: 200px;
+        display: block;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 16px;
+        z-index: 1000;
+        position: relative;
+        top: -1130px;
+        margin: 25px 5px;
+        padding: 0 20px;
+        left: 20%;
+        border: none;
+        border-radius: 3px;
+        font-weight: 700;
+        white-space: normal;
+        box-shadow: 0px 0px 10px 0px #707070;
+        cursor: pointer;
+        background-color: #ffffff;
+        transition: 0.4s;
+    }
+    .conteinerfloat #download{
+        color: rgb(255, 255, 255);
+        height: 40px;
+        width: 120px;
+        display: block;
+        font-family: 'Avenir Book', sans-serif;
+        padding: 0 0px;
+        font-size: 16px;
+        z-index: 1000;
+        position: relative;
+        top: -1125px;
+        left: 70%;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        white-space: normal;
+        cursor: pointer;
+        background-color: #56BE72;
+        box-shadow: none;
+        transition: 0.4s;
+    }
+    .conteinerfloat #download:active{
+        background-color: #469f5e;
+    }
+    
+    .conteinerfloat #Atras{
+        color: rgb(255, 255, 255);
+        height: 30px;
+        padding: 0 0px;
+        width: 70px;
+        display: block;
+        margin: 0px 0px;
+        font-family: 'Avenir Book', sans-serif;
+        font-size: 16px;
+        z-index: 1000;
+        position: relative;
+        top: -1130px;
+        left: 73%;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        white-space: normal;
+        cursor: pointer;
+        background-color: #353535;
+        transition: 0.4s;
+        box-shadow: none;
+        cursor: pointer;
+        z-index: 100000000000;
+    }
+    .conteinerfloat #Atras:active{
+        background-color: #666565;
+    }
+        /*</primer contenedor (descargar app)>*/

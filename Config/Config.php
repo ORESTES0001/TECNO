@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'https://tecnoagro.azurewebsites.net';
+const base_url = 'https://localhost/tecnoagro';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
@@ -18,13 +18,11 @@ const USERTYPE = 7;
 /* ----------------------------------------------------- */
 /*             CONSTANTES PARA CONEXION DB                  */
 /* ----------------------------------------------------- */
-
 const DB_HOST = "dbtec.mysql.database.azure.com";
 const DB_NAME = "dbtec";
 const DB_USER = "Slender";
 const DB_PASSWORD = "Tecno89!!";
 const DB_CHARSET = "utf8";
-
 /* ----------------------------------------------------- */
 /*             INFORMACION DEL SITIO                  */
 /* ----------------------------------------------------- */
