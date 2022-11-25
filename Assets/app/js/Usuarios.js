@@ -11,7 +11,7 @@ document.addEventListener(
       },
       // consultar los datos a la api
       ajax: {
-        url: `https://localhost/tecnoagro/usuarios/all`,
+        url: `${base_url}/usuarios/all`,
         dataSrc: "",
       },
       // datos desde el servidor
