@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'https://prueba22das2.azurewebsites.net/';
+const base_url = 'https://pruebas23.azurewebsites.net';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
