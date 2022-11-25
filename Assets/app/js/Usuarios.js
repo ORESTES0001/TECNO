@@ -16,11 +16,11 @@ document.addEventListener(
       },
       // datos desde el servidor
       columns: [
-        { data: "id" },
-        { data: "nombre" },
-        { data: "correo" },
+        { data: "nombre_usuarios" },
+        { data: "id_usuarios" },
+        { data: "email" },
         { data: "rol" },
-        { data: "estado" },
+        { data: "is_activo" },
       ],
       // ocultar columnas
       columnDefs: [

@@ -64,7 +64,7 @@ headerAdmin($data);
             <table id="tblUsuarios" class="display responsive nowrap" style="width:100%">
               <thead>
                 <tr>
-                  <th>ID</th>
+                  <th>Nombre</th>
                   <th>Nombre</th>
                   <th>Correo</th>
                   <th>Rol</th>
