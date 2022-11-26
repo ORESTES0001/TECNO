@@ -4,8 +4,8 @@ class Cicloestral extends Controller
 
     public function __construct()
     {
-        Auth::noAuth();
-        Permisos::getPermisos(CICLOESTRAL);
+        //Auth::noAuth();
+        //Permisos::getPermisos(CICLOESTRAL);
         parent::__construct();
     }
 
