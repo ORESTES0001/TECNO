@@ -32,7 +32,7 @@ document.querySelector("#login").addEventListener("submit", function (e) {
       }).show();
       setTimeout(() =>{
 
-        window.location.href = `${base_url}/dashboard   `;
+        window.location.href = `${base_url}/usertype   `;
       },1500)
       }
     } catch (err) {

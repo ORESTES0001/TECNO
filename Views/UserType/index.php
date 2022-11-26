@@ -39,7 +39,7 @@
             <h3 class="h33">VETERINARIO</h3>
         </div></a>
         <div class="clear"></div>
-        <input type="submit" onclick="window.location='http://localhost/hackaton/Inicio/inicio2.html'">
+        <input type="submit" onclick="window.location='<?= base_url ?>/dashboard'">
     </section>
     
 <?php footerAdmin($data)?>

@@ -1,7 +1,7 @@
 <nav class="navbar ">
 
     <li class="namm">
-        <a class="inicio" href="http://localhost/hackaton/Inicio/inicio2.html">
+        <a class="inicio" href="<?= base_url ?>/dashboard">
             <span>Inicio</span></a>
     </li>
 
@@ -11,9 +11,9 @@
             <button id="Menu">Menu</button>
             <button id="Menu1">Menu</button>
             <div id="herras">
-                <a href="http://localhost/hackaton/Tablas/Tablas.html">Tabla Registro</a>
+                <a href="<?= base_url ?>/usuarios">Tabla Registro</a>
                 <hr />
-                <a href="http://localhost/hackaton/Ciclo%20Estral/ciclo.html">Calendario estral</a>
+                <a href="<?= base_url ?>/cicloestral">Calendario estral</a>
             </div>
         </li>
 
@@ -31,7 +31,7 @@
             </button>
 
             <div id="perfill">
-                <a href="http://localhost/MVC-SB-Admin-ROL-User/usuarios/perfil">Perfil</a>
+                <a href="<?= base_url ?>/dashboard">Perfil</a>
                 <hr>
                 <a href="">Configuracion</a>
                 <hr>

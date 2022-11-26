@@ -33,7 +33,7 @@ if (file_exists($dirController)) {
     require_once $dirController;
     $controller = new $controller();
     if (method_exists($controller, $metodo)) {
-        $controller->$metodo($parametro);
+         $controller->$metodo($parametro);
     } else {
         require_once $errorController;
         $controller = new Error404;
