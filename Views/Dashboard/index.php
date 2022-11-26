@@ -13,8 +13,9 @@
             <h1> TECNOAGRO MOVIL</h1>
             <h2>Manten todos tus datos en un solo lugar!</h2>
             <h3>Con nuestra aplicacion movil podras tener todos tus inventarios a manos y llevarlos donde tu quieras exportalos a tu base de datos de tu gusto</h3>
-            <button id="download">Descargar APP</button>
-            <button id="continue" onclick="window.location='http://localhost/hackaton/UserType/UserType.html'">Continuar</button>
+             <button id="download" onclick="window.open('https://drive.google.com/file/d/1jRtZbGEatDcgBCdz5qBWB5E7D33s9Wfs/view' , '_blank')">Descargar APP</button> 
+
+             <button id="continue" onclick="window.location='http://localhost/hackaton/UserType/UserType.html'">Continuar</button>
             <img src="<?php echo IMG ?>/home_1.jpg" alt="">
         </section>
         <section class="bodyyy">
