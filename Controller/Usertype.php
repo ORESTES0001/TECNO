@@ -15,7 +15,7 @@ class Usertype extends Controller
             header('Location:' . base_url . '/dashboard');
         }
 
-        $data['page_name'] = "tipo de usuario";
+        $data['page_name'] = "tipo de usuario"; 
         $data['function_css'] = "UserType.css";
         $data['function_js'] = "UserType.js";
         $data['function1_js'] = "UserType.js";
