@@ -15,25 +15,8 @@ document.querySelector("#login").addEventListener("submit", function (e) {
       const resultado = await respuesta.json();
   
       if (resultado.error) {
-        new Noty({
-          type: "error",
-          text: `${resultado.error}`,
-          layout: "topCenter",
-          theme: "metroui",
-          timeout: 1500,
-        }).show();
+  
       } else {      
-          new Noty({
-        type: "success",
-        text: `${resultado.msg}`,
-        layout: "topCenter",
-        theme: "metroui",
-        timeout: 1000,
-      }).show();
-      setTimeout(() =>{
-
-        window.location.href = `${base_url}/usertype   `;
-      },1500)
       }
     } catch (err) {
       console.log(err);
