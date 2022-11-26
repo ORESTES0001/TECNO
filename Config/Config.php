@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'https://localhost/tecnoagro';
+const base_url = 'https://tecnoagro.herokuapp.com';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
@@ -18,11 +18,10 @@ const USERTYPE = 7;
 /* ----------------------------------------------------- */
 /*             CONSTANTES PARA CONEXION DB                  */
 /* ----------------------------------------------------- */
-
-const DB_HOST = "localhost";
-const DB_NAME = "tecnoagro";
-const DB_USER = "root";
-const DB_PASSWORD = "";
+const DB_HOST = "dbtec.mysql.database.azure.com";
+const DB_NAME = "dbtec";
+const DB_USER = "Slender";
+const DB_PASSWORD = "Tecno89!!";
 const DB_CHARSET = "utf8";
 
 /* ----------------------------------------------------- */
