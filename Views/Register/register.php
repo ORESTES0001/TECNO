@@ -34,8 +34,6 @@
             <div style="clear:both;"></div>
             <h5 id="disfruta">Disfruta de nuestra comunidad donde podrás 
 compartir y adquirir información a tu gusto</h5>
-           <?php 
-       debug($controller->$metodo($parametro))  ;?>
             <h3 id="in">Inicio de sesión</h3>
             
             <h3 id="ir">Registrarse</h3>
