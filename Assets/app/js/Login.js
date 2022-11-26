@@ -5,7 +5,6 @@ document.querySelector("#login").addEventListener("submit", function (e) {
   
   async function login() {
       
-       debug($controller->$metodo($parametro))  ;
   let login = document.querySelector("#login");
     const datos = new FormData(login);
     try {
