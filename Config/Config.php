@@ -1,6 +1,6 @@
 <?php
 
-const base_url = 'https://tecnoagro.azurewebsites.net';
+const base_url = 'isaiasejemplo.azurewebsites.net';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
