@@ -1,11 +1,11 @@
 <?php
 
-const base_url = 'https://localhost/tecnoagro';
+const base_url = 'https://isaiashack.azurewebsites.net';
 
 define('SITE_LANG', 'es');
 /* ----------------------------------------------------- */
 /*             CONSTANTES PAGINAS DE NAVEGACION          */
-/* ----------------------------------------------------- */
+/* ----------------------------------------------------- *
 
 const DASHBOARD = 1;
 const PERFIL = 2;
