@@ -4,8 +4,8 @@ class Usertype extends Controller
 
     public function __construct()
     {
-        Auth::noAuth();
-        Permisos::getPermisos(USERTYPE);
+        // Auth::noAuth();
+        // Permisos::getPermisos(USERTYPE);
         parent::__construct();
     }
 
