@@ -18,8 +18,8 @@ const USERTYPE = 7;
 /* ----------------------------------------------------- */
 /*             CONSTANTES PARA CONEXION DB                  */
 /* ----------------------------------------------------- */
-const DB_HOST = "dbtec.mysql.database.azure.com";
-const DB_NAME = "dbtec";
+const DB_HOST = "dbtecno.mysql.database.azure.com";
+const DB_NAME = "dbtecno";
 const DB_USER = "Slender";
 const DB_PASSWORD = "Tecno89!!";
 const DB_CHARSET = "utf8";
